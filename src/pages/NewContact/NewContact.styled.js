@@ -1,41 +1,21 @@
 import styled from "styled-components";
 
-export const FormOfContacts = styled.form`
-    width: 500px;
-    padding: 10px 20px;
-    border: 1px solid gray;
-`
-export const Label = styled.label`
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    padding-bottom: 10px;
-`
-export const InputLine = styled.input`
-    width: 480px;
-    margin-bottom: 10px;
-`
-export const InputFilter = styled(InputLine)`
-    margin-left: 20px;
-    margin-top: 10px;
-    display: block;
-`
 export const Button = styled.button`
     display: inline-block;
     box-sizing: border-box;
-    padding: 0 25px;
-    margin: 0 15px 15px 25px;
+    height: 36px;
+    width: 121px;
+    padding: 0 24px;
+    margin-left: calc(100% - 200px);
     outline: none;
-    border: 1px solid #fff;
-    border-radius: 30px;
-    height: 26px;
+    border: none;
+    border-radius: 4px;
     line-height: 16px;
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
-    color: #444;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgb(65 132 144 / 10%), 0 1px 3px rgb(0 0 0 / 8%);
+    background-color: rgba(26,115,232);
+    color: #ffffff;
     cursor: pointer;
     user-select: none;
     appearance: none;
