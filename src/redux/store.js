@@ -15,7 +15,8 @@ const contactsReduser = createSlice({
         },
         deleteContactForever(state, action) {
             return state.filter((contact) => contact.id !== action.payload)
-        }
+        },
+        
     }
 });
 export const { addContact, deleteContact, deleteContactForever } = contactsReduser.actions;
@@ -24,7 +25,7 @@ const filterReducer = createSlice({
     name: 'filter',
     initialState: '',
     reducers: {
-        setFilter(state, action) { state = action.payload },
+        setFilter(state, action) { return state = action.payload },
     }
 });
 export const { setFilter } = filterReducer.actions;
