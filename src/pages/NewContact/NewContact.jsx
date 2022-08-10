@@ -40,19 +40,19 @@ export const NewContact = () => {
                 onSubmit={hundleSubmit}
             >   
                 <Form >
-                    <Button type="submit" >Зберегти</Button>
+                    <Button type="submit" >Save</Button>
                     <hr></hr>
                     <ContactInputLine
                         type='text'
                         name='name'
-                        title="Ім'я може складатися тільки з букв, апострофа, дефісу та пробелів."
-                        placeholder="Ім'я"
+                        title="Name cam contain only letters, numbers and defis"
+                        placeholder="Name"
                     />
                     <ContactInputLine
                         type='tel'
                         name='number'
-                        title="Номер телефонe повинен складатися з цифр і може мати пробіли, дефіси та знак +"
-                        placeholder='Телефон'
+                        title="Phone number must contain only numbers, spases, defis and +"
+                        placeholder='Phone number'
                     />                    
                 </Form>
             </Formik>

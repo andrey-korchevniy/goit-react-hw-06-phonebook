@@ -27,7 +27,7 @@ export const FilterBar = () => {
                     <FilterField
                         type="text"
                         name="filter"
-                        placeholder="Поиск"
+                        placeholder="Search contacts"
                         onChange={handleOnChange}
                         required
                         value={filterValue}

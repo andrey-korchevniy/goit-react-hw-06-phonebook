@@ -5,7 +5,7 @@ export const Logo = () => {
     return (
         <Wrapper to='/'>
             <img src={contactLogo} alt='contact logo' width='40px' height='40px'/>
-            <H1>Контакти</H1>
+            <H1>Contacts</H1>
         </Wrapper>
     )
 }

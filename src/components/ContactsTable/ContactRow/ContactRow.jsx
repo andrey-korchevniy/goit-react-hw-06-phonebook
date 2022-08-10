@@ -21,7 +21,7 @@ export const ContactRow = ({ id, name, number, isDeleted }) => {
             <CellAmount>{number}</CellAmount>
             <CellAction>
                 <DeleteBtn onClick={onDeleteContact}><SvgClear /></DeleteBtn>
-                {isDeleted ? <DeleteForeverBtn onClick={onDeleteForever}>Видалити назавжди</DeleteForeverBtn> : <></>}
+                {isDeleted ? <DeleteForeverBtn onClick={onDeleteForever}>Delete forever</DeleteForeverBtn> : <></>}
             </CellAction>
         </Row>
     )

@@ -18,13 +18,13 @@ export const NavMenu = () => {
                 <li>
                     <StyledLink to='/'>
                         <SvgContact />
-                        <Item><P>Контакти </P><span>{noDeleted}</span></Item>
+                        <Item><P>Contacts </P><span>{noDeleted}</span></Item>
                     </StyledLink>
                 </li>
                 <li>
                     <StyledLink to='/trash'>
                         <SvgTrash />
-                        <Item><P>Корзина</P><span>{isDeleted}</span></Item>
+                        <Item><P>Trash</P><span>{isDeleted}</span></Item>
                     </StyledLink>
                 </li>
             </MenuItems>

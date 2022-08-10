@@ -16,6 +16,6 @@ export const Trash = () => {
         )
     } 
     else return (
-        <h3> У вас немає контактів </h3>
+        <h3> You don`t have any deleted contacts </h3>
     )
 }

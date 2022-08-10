@@ -8,9 +8,9 @@ export const ContactsTable = ({ contactForRender }) => {
         <Table>
             <HeadRow>
                 <tr>
-                    <HeadCell>Ім'я</HeadCell>
-                    <HeadCell>Телефон</HeadCell>
-                    <HeadCell>Дія</HeadCell>
+                    <HeadCell>Name</HeadCell>
+                    <HeadCell>Phone number</HeadCell>
+                    <HeadCell>Action</HeadCell>
                 </tr>
             </HeadRow>
             <tbody>
