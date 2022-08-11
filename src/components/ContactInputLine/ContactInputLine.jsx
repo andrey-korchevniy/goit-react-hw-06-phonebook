@@ -2,6 +2,7 @@ import { SvgName, SvgTel } from "images/Svg";
 import { Label, InputField, ErrorInput } from "./ContactInputLine.styled";
 import PropTypes from 'prop-types';
 
+// line 'Nane' or 'Phone' - depends of props
 export const ContactInputLine = ({ type, name, title, placeholder }) => {
     return (
         <Label htmlFor='number'>

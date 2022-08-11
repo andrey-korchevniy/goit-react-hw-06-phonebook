@@ -2,7 +2,7 @@ import { FilterForm, FilterField, InputBlock, FilterBtn, ClearFilterBtn } from "
 import { Formik } from 'formik';
 import { SvgSearch, SvgClear } from "images/Svg";
 import { useSelector, useDispatch } from "react-redux";
-import { setFilter } from "redux/store";
+import { setFilter } from "redux/slices";
 
 export const FilterBar = () => {
 

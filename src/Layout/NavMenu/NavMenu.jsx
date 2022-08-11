@@ -6,16 +6,16 @@ import { useSelector } from "react-redux";
 
 export const NavMenu = () => {
 
-    const contactsAmount = useSelector(state => state.contacts);
-    const noDeleted = contactsAmount.filter(item => item.isDeleted === false).length
-    const isDeleted = contactsAmount.length - noDeleted;
+    const contactsAmount = useSelector(state => state.contacts.items);                  // get contacts list from state
+    const noDeleted = contactsAmount.filter(item => item.isDeleted === false).length;   // calculate contacts
+    const isDeleted = contactsAmount.length - noDeleted;                                // calculate deleted contacts
 
     return (
         <Menu>
             <Logo />
             <MenuItems>   
-            <AddNewContactButton />
-                <li>
+                <AddNewContactButton />
+                <li>    
                     <StyledLink to='/'>
                         <SvgContact />
                         <Item><P>Contacts </P><span>{noDeleted}</span></Item>

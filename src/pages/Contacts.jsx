@@ -1,14 +1,13 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { ContactsTable } from "components/ContactsTable/ContactsTable";
+import { getContactsForRender } from "util/getContactsForRender";
 
 export const Contacts = () => {
-    const contacts = useSelector(state => state.contacts);
-    const filter = useSelector(state => state.filter);
+    const contacts = useSelector(state => state.contacts.items);
+    const filter = useSelector(state => state.contacts.filter);
 
-    // useEffect(() => { JSON.parse(localStorage.getItem("contacts")) }, [])
-
-    const contactForRender = contacts.length ? contacts.filter(({ name, number, isDeleted }) => ((name.includes(filter) || number.includes(filter)) && !isDeleted)) : [];
+    const contactForRender = getContactsForRender(contacts, filter);  // get contacts list for render
 
     if (contactForRender.length !== 0) {
         return (

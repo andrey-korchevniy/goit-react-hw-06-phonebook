@@ -2,7 +2,7 @@ import { Row, Cell, CellAmount, DeleteBtn, DeleteForeverBtn, CellAction } from '
 import PropTypes from 'prop-types';
 import { SvgClear } from 'images/Svg';
 import { useDispatch } from "react-redux";
-import { deleteContact, deleteContactForever } from "redux/store";
+import { deleteContact, deleteContactForever } from "redux/slices";
 
 export const ContactRow = ({ id, name, number, isDeleted }) => {
     const dispatch = useDispatch()
@@ -14,7 +14,7 @@ export const ContactRow = ({ id, name, number, isDeleted }) => {
     const onDeleteForever = () => {
        dispatch(deleteContactForever(id));
     }
-
+// rendering pages 'contacts' or 'trash'. In Trash - additionaly render buttun 'delete forever'
     return (
         <Row>
             <Cell>{name}</Cell>

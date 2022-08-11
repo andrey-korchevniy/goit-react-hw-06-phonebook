@@ -3,7 +3,7 @@ import { Button } from './NewContact.styled';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "redux/store";
+import { addContact } from "redux/slices";
 import { nanoid } from 'nanoid';
 import { SvgClear } from "images/Svg";
 import { Link } from "react-router-dom";
@@ -16,11 +16,11 @@ const validationSchema = yup.object().shape({
 
 export const NewContact = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(state => state.contacts);
+    const contacts = useSelector(state => state.contacts.items);
 
     const hundleSubmit = (values, { resetForm }) => {
         const { name, number } = values;
-
+        // check if there are any such contacts
         if (contacts.map(el => el = el.name).includes(name) ||
             contacts.map(el => el = el.number).includes(number)) {
             alert(`Цей контакт вже є у книзі`)
