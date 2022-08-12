@@ -3,7 +3,7 @@ import { Button } from './NewContact.styled';
 import { Formik, Form } from 'formik';
 import * as yup from 'yup';
 import { useSelector, useDispatch } from "react-redux";
-import { addContact } from "redux/slices";
+import { addContact } from "redux/contacts";
 import { nanoid } from 'nanoid';
 import { SvgClear } from "images/Svg";
 import { Link } from "react-router-dom";
@@ -16,7 +16,7 @@ const validationSchema = yup.object().shape({
 
 export const NewContact = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(state => state.contacts.items);
+    const contacts = useSelector(state => state.items);
 
     const hundleSubmit = (values, { resetForm }) => {
         const { name, number } = values;

@@ -2,7 +2,7 @@ import { Row, Cell, CellAmount, DeleteBtn, DeleteForeverBtn, CellAction } from '
 import PropTypes from 'prop-types';
 import { SvgClear } from 'images/Svg';
 import { useDispatch } from "react-redux";
-import { deleteContact, deleteContactForever } from "redux/slices";
+import { deleteContact, deleteContactForever } from "redux/contacts";
 
 export const ContactRow = ({ id, name, number, isDeleted }) => {
     const dispatch = useDispatch()

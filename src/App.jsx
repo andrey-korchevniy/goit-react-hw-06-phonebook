@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Layout } from "Layout/Layout";
+import { Layout } from "ayout/Layout";
 import { Contacts } from "pages/Contacts";
 import { NewContact } from "pages/NewContact/NewContact";
 import { Trash } from "pages/Trash/Trash";

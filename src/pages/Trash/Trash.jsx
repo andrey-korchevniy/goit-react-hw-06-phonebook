@@ -4,8 +4,8 @@ import { ContactsTable } from "components/ContactsTable/ContactsTable";
 import { getContactsForRender } from "util/getContactsForRender";
 
 export const Trash = () => {
-    const contacts = useSelector(state => state.contacts.items);
-    const filter = useSelector(state => state.contacts.filter);
+    const contacts = useSelector(state => state.items);
+    const filter = useSelector(state => state.filter);
     const trash = true;
 
     const contactForRender = getContactsForRender(contacts, filter, trash); // get contacts list for trash
