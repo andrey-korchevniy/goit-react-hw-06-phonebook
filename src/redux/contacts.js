@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { useSelector } from "react-redux";
 
 export const contactsState = createSlice({
     name: 'contacts',
@@ -22,6 +23,17 @@ export const contactsState = createSlice({
     }
 });
 
+export const GetListOfContacts = (trash) => {
+    const contacts = useSelector(state => state.items);
+    const filter = useSelector(state => state.filter);
+    let contactsForRender = [];
+
+    if (contacts.length) {
+        contactsForRender = contacts.filter(({ name, number, isDeleted }) =>
+        (name.includes(filter) || number.includes(filter)) && isDeleted === trash)
+    } 
+    return contactsForRender;
+}
+
 export const { addContact, deleteContact, deleteContactForever, setFilter } = contactsState.actions;
 export const rootReducer = contactsState.reducer;
-
