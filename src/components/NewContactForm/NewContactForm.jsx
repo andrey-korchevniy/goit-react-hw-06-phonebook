@@ -2,7 +2,7 @@ import { Formik, Form } from 'formik';
 import { ContactInputLine } from 'components/ContactInputLine/ContactInputLine';
 import { Button } from 'pages/NewContact/NewContact.styled';
 
-export const NewContactForm = (validationSchema, hundleSubmit) => {
+export const NewContactForm = ({ validationSchema, hundleSubmit }) => {
     return (
             <Formik
                 initialValues={{ name: '', number: '' }}
