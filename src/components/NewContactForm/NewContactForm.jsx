@@ -1,8 +1,14 @@
 import { Formik, Form } from 'formik';
 import { ContactInputLine } from 'components/ContactInputLine/ContactInputLine';
 import { Button } from 'pages/NewContact/NewContact.styled';
+import * as yup from 'yup';
 
-export const NewContactForm = ({ validationSchema, hundleSubmit }) => {
+const validationSchema = yup.object().shape({
+    name: yup.string().min(3).required(),
+    number: yup.number().required()
+})
+
+export const NewContactForm = ({ hundleSubmit }) => {
     return (
             <Formik
                 initialValues={{ name: '', number: '' }}

@@ -3,10 +3,11 @@ import { Logo } from "components/Logo/Logo";
 import { AddNewContactButton } from "components/AddNewContactButton/AddNewContactButton";
 import { SvgContact, SvgTrash } from "images/Svg";
 import { useSelector } from "react-redux";
+import { getContacts } from "redux/contacts";
 
 export const NavMenu = () => {
 
-    const contactsAmount = useSelector(state => state.items);                  // get contacts list from state
+    const contactsAmount = useSelector(getContacts);                  // get contacts list from state
     const noDeleted = contactsAmount.filter(item => item.isDeleted === false).length;   // calculate contacts
     const isDeleted = contactsAmount.length - noDeleted;                                // calculate deleted contacts
 

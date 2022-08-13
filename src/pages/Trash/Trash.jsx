@@ -1,9 +1,10 @@
 import React from "react";
 import { ContactsTable } from "components/ContactsTable/ContactsTable";
-import { GetListOfContacts } from "redux/contacts";
+import { getTrashList } from "redux/contacts";
+import { useSelector } from "react-redux";
 
 export const Trash = () => {
-    const contactForRender = GetListOfContacts(true); // get contacts list for trash
+    const contactForRender = useSelector(getTrashList); // get contacts list for trash
    
     if (contactForRender.length > 0) {
         return (

@@ -1,9 +1,10 @@
 import React from "react";
 import { ContactsTable } from "components/ContactsTable/ContactsTable";
-import { GetListOfContacts } from "redux/contacts";
+import { getContactsList } from "redux/contacts";
+import { useSelector } from "react-redux";
 
 export const Contacts = () => {
-    const contactForRender = GetListOfContacts(false);  // get contacts list for render
+    const contactForRender = useSelector(getContactsList);  // get contacts list for render
 
     if (contactForRender.length !== 0) {
         return (

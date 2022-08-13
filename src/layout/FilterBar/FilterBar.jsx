@@ -3,11 +3,12 @@ import { Formik } from 'formik';
 import { SvgSearch, SvgClear } from "images/Svg";
 import { useSelector, useDispatch } from "react-redux";
 import { setFilter } from "redux/contacts";
+import { getFilter } from "redux/contacts";
 
 export const FilterBar = () => {
 
     const dispatch = useDispatch()
-    const filterValue = useSelector(state => state.filter);
+    const filterValue = useSelector(getFilter);
 
     const handleOnChange = (e) => {
         dispatch(setFilter(e.currentTarget.value))

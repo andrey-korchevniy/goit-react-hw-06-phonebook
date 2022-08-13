@@ -1,20 +1,15 @@
 import React from "react";
-import * as yup from 'yup';
 import { useSelector, useDispatch } from "react-redux";
 import { addContact } from "redux/contacts";
 import { nanoid } from 'nanoid';
 import { SvgClear } from "images/Svg";
 import { Link } from "react-router-dom";
 import { NewContactForm } from "components/NewContactForm/NewContactForm";
-
-const validationSchema = yup.object().shape({
-    name: yup.string().min(3).required(),
-    number: yup.number().required()
-})
+import { getContacts } from "redux/contacts";
 
 export const NewContact = () => {
     const dispatch = useDispatch();
-    const contacts = useSelector(state => state.items);
+    const contacts = useSelector(getContacts);
 
     const hundleSubmit = (values, { resetForm }) => {
         const { name, number } = values;
@@ -32,7 +27,7 @@ export const NewContact = () => {
     return (
         <>
             <Link to={'/'}> <SvgClear /></Link>
-            <NewContactForm validationSchema={validationSchema} hundleSubmit={hundleSubmit} />
+            <NewContactForm hundleSubmit={hundleSubmit} />
         </>
     );
 }
