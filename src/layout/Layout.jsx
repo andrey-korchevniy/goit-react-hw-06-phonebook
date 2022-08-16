@@ -4,13 +4,13 @@ import { NavMenu } from "./NavMenu/NavMenu";
 import { FilterBar } from "./FilterBar/FilterBar";
 
 export const Layout = () => {
-    return (
-        <Container>
-            <NavMenu />
-            <FilterBar />
-            <Main>
-                <Outlet />
-            </Main>
-      </Container>  
-    )
+  return (
+    <Container>
+      <NavMenu />
+      <FilterBar />
+      <Main>
+        <Outlet />
+      </Main>
+    </Container>  
+  )
 }
